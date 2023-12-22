@@ -1,1 +1,113 @@
 @import url(./fonts.css);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --RR: "Roboto-Regular";
+  --RB: "Roboto-Bold";
+  --XS: 1rem;
+  --MD: 1.125rem;
+  --LG: 1.188rem;
+  --XL: 1.375rem;
+  --Primary: #ef4423;
+  --Secondary: #3a3838;
+  --Gray: #ededed;
+  --Light: #ffffff;
+}
+
+.page-header {
+  padding-block: 20px 15px;
+}
+
+.container {
+  max-width: 1150px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  width: 150px;
+}
+
+.site-logo {
+  width: 100%;
+}
+
+.header-nav {
+  display: flex;
+  column-gap: 15px;
+  transition: 0.4s;
+}
+
+.header-nav_link {
+  color: var(--Secondary);
+  font-family: var(--RB);
+  font-size: var(--MD);
+  transition: 0.4s;
+}
+
+.header-nav_link:hover {
+  color: var(--Primary);
+}
+
+.burger-menu {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+
+.burger-menu span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--Secondary);
+  position: relative;
+  transition: 0.4s;
+}
+
+.burger-menu span::after {
+  width: 100%;
+  height: 100%;
+  background-color: var(--Secondary);
+  position: absolute;
+  content: "";
+  top: 10px;
+  transition: 0.4s;
+}
+
+.burger-menu span::before {
+  width: 100%;
+  height: 100%;
+  background-color: var(--Secondary);
+  position: absolute;
+  content: "";
+  bottom: 10px;
+  transition: 0.4s;
+}
+
+.burger-menu.show span {
+  background-color: transparent;
+}
+
+.burger-menu.show span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-menu.show span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
