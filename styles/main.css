@@ -138,6 +138,10 @@
   margin: 0 auto;
 }
 
+.cards-content{
+  display: flex;
+}
+
 .a-card {
   max-width: 350px;
   width: 100%;
